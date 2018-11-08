@@ -1,0 +1,722 @@
+  [1m[35m (0.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "memory_map_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "memory_map_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (596.6ms)[0m  [1m[35mCREATE DATABASE "memory_map_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (509.9ms)[0m  [1m[35mCREATE DATABASE "memory_map_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (24.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (30.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1958841835717104870)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateWordLists (20181108165616)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (35.4ms)[0m  [1m[35mCREATE TABLE "word_lists" ("id" bigserial primary key, "foreign_word" character varying NOT NULL, "english_word" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181108165616_create_word_lists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181108165616"]]
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-08 17:07:45.383027"], ["updated_at", "2018-11-08 17:07:45.383027"]]
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1958841835717104870)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mWordList Create (1.8ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Ciao"], ["english_word", "Hello"], ["created_at", "2018-11-08 17:07:51.302548"], ["updated_at", "2018-11-08 17:07:51.302548"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWordList Create (0.3ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Ci vediamo!"], ["english_word", "See you!"], ["created_at", "2018-11-08 17:07:51.313114"], ["updated_at", "2018-11-08 17:07:51.313114"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mWordList Create (0.4ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Dopo"], ["english_word", "After"], ["created_at", "2018-11-08 17:07:51.317425"], ["updated_at", "2018-11-08 17:07:51.317425"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mWordList Create (0.3ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Dimi"], ["english_word", "Give me"], ["created_at", "2018-11-08 17:07:51.321628"], ["updated_at", "2018-11-08 17:07:51.321628"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWordList Create (0.4ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Va Vanculo"], ["english_word", "Screw you"], ["created_at", "2018-11-08 17:07:51.327480"], ["updated_at", "2018-11-08 17:07:51.327480"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2018-11-08 11:43:20 -0600
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/krestko/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WordListsController#index as HTML
+  [1m[36mWordList Load (1.0ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 24ms (Views: 12.5ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 11:44:37 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (12.2ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 16ms (Views: 2.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/0" for 127.0.0.1 at 2018-11-08 11:45:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/0"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/1" for 127.0.0.1 at 2018-11-08 11:45:06 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_list/1" for 127.0.0.1 at 2018-11-08 11:45:27 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/word_list/1"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists/1" for 127.0.0.1 at 2018-11-08 11:45:30 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 14ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/word_lists/0" for 127.0.0.1 at 2018-11-08 11:45:39 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find WordList with 'id'=0):
+  
+app/controllers/word_lists_controller.rb:32:in `find_word_list'
+Started GET "/word_lists/3" for 127.0.0.1 at 2018-11-08 11:45:43 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mWordList Load (3.4ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/" for 127.0.0.1 at 2018-11-08 11:46:36 -0600
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-08 11:46:47 -0600
+Processing by WordListsController#index as HTML
+  [1m[36mWordList Load (1.2ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-11-08 11:46:47 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/wine_lists" for 127.0.0.1 at 2018-11-08 11:48:04 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/wine_lists"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 11:48:11 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.6ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/word_lists?Va%20Bene=It%27s%20all%20good" for 127.0.0.1 at 2018-11-08 11:50:29 -0600
+Processing by WordListsController#create as */*
+  Parameters: {"Va bene"=>"It's all good", "Va Bene"=>"It's all good"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: word_list):
+  
+app/controllers/word_lists_controller.rb:36:in `word_list_params'
+app/controllers/word_lists_controller.rb:15:in `create'
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 11:51:12 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.8ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/word_lists" for 127.0.0.1 at 2018-11-08 11:53:48 -0600
+Processing by WordListsController#create as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: word_list):
+  
+app/controllers/word_lists_controller.rb:36:in `word_list_params'
+app/controllers/word_lists_controller.rb:15:in `create'
+Started POST "/word_lists" for 127.0.0.1 at 2018-11-08 11:54:35 -0600
+Processing by WordListsController#create as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[36mWordList Create (3.0ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Va bene!"], ["english_word", "It's all good!"], ["created_at", "2018-11-08 17:54:35.990485"], ["updated_at", "2018-11-08 17:54:35.990485"]]
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+Completed 201 Created in 42ms (Views: 0.7ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 11:55:08 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.1ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:55:15 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/word_lists" for 127.0.0.1 at 2018-11-08 11:55:51 -0600
+  
+ActionController::RoutingError (No route matches [PUT] "/word_lists"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 11:55:55 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.2ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:56:59 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mWordList Load (0.6ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:57:09 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"6"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:57:14 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mWordList Load (2.1ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 2.1ms)
+
+
+Started PATCH "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:57:48 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"6"}
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:58:23 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"6"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:58:27 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"6"}
+  [1m[36mWordList Load (0.9ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 11:59:41 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.7ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/word_lists/6" for 127.0.0.1 at 2018-11-08 11:59:49 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"6"}
+  [1m[36mWordList Load (2.4ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:00:09 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.9ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/word_lists" for 127.0.0.1 at 2018-11-08 12:00:47 -0600
+Processing by WordListsController#create as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[36mWordList Create (0.8ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Va bene!"], ["english_word", "It's all good!"], ["created_at", "2018-11-08 18:00:47.086253"], ["updated_at", "2018-11-08 18:00:47.086253"]]
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+Completed 201 Created in 11ms (Views: 0.5ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:00:56 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.5ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/word_lists/7" for 127.0.0.1 at 2018-11-08 12:01:11 -0600
+Processing by WordListsController#destroy as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"7"}
+  [1m[36mWordList Load (0.7ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:25
+  [1m[36mWordList Destroy (0.6ms)[0m  [1m[31mDELETE FROM "word_lists" WHERE "word_lists"."id" = $1[0m  [["id", 7]]
+  ↳ app/controllers/word_lists_controller.rb:25
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:25
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 7.6ms)
+
+
+  
+NoMethodError (undefined method `key?' for "Words successfully deleted.":String):
+  
+app/controllers/word_lists_controller.rb:26:in `destroy'
+Started DELETE "/word_lists" for 127.0.0.1 at 2018-11-08 12:01:21 -0600
+  
+ActionController::RoutingError (No route matches [DELETE] "/word_lists"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:01:25 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.6ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/word_lists/6" for 127.0.0.1 at 2018-11-08 12:02:04 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"6"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 12:02:49 -0600
+Processing by WordListsController#index as HTML
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:03:34 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/word_lists/" for 127.0.0.1 at 2018-11-08 12:04:57 -0600
+  
+ActionController::RoutingError (No route matches [PUT] "/word_lists"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:05:16 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-08 12:05:59 -0600
+Processing by WordListsController#index as HTML
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:06:08 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.7ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:06:33 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.8ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/word_lists/" for 127.0.0.1 at 2018-11-08 12:07:13 -0600
+  
+ActionController::RoutingError (No route matches [PATCH] "/word_lists"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/word_lists/" for 127.0.0.1 at 2018-11-08 12:07:21 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.7ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/word_lists/5" for 127.0.0.1 at 2018-11-08 12:10:00 -0600
+Processing by WordListsController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/word_lists/" for 127.0.0.1 at 2018-11-08 12:10:06 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/word_lists/5" for 127.0.0.1 at 2018-11-08 12:10:15 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!", "id"=>"5"}
+  [1m[36mWordList Load (0.6ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[36mWordList Update (0.5ms)[0m  [1m[33mUPDATE "word_lists" SET "foreign_word" = $1, "english_word" = $2, "updated_at" = $3 WHERE "word_lists"."id" = $4[0m  [["foreign_word", "Va bene!"], ["english_word", "It's all good!"], ["updated_at", "2018-11-08 18:10:15.086192"], ["id", 5]]
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/word_lists/" for 127.0.0.1 at 2018-11-08 12:10:24 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.4ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/word_lists/" for 127.0.0.1 at 2018-11-08 12:10:57 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/word_lists" for 127.0.0.1 at 2018-11-08 12:11:15 -0600
+Processing by WordListsController#create as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"It's all good!"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[36mWordList Create (0.4ms)[0m  [1m[32mINSERT INTO "word_lists" ("foreign_word", "english_word", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["foreign_word", "Va bene!"], ["english_word", "It's all good!"], ["created_at", "2018-11-08 18:11:15.294150"], ["updated_at", "2018-11-08 18:11:15.294150"]]
+  ↳ app/controllers/word_lists_controller.rb:15
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:15
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:11:21 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (1.1ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/word_lists" for 127.0.0.1 at 2018-11-08 12:13:55 -0600
+Processing by WordListsController#index as */*
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT "word_lists".* FROM "word_lists"[0m
+  ↳ app/controllers/concerns/response.rb:3
+Completed 200 OK in 21ms (Views: 9.5ms | ActiveRecord: 8.4ms)
+
+
+Started PUT "/word_lists/8" for 127.0.0.1 at 2018-11-08 12:14:28 -0600
+Processing by WordListsController#update as */*
+  Parameters: {"foreign_word"=>"Va bene!", "english_word"=>"Behhhhhhh", "id"=>"8"}
+  [1m[36mWordList Load (0.3ms)[0m  [1m[34mSELECT  "word_lists".* FROM "word_lists" WHERE "word_lists"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/word_lists_controller.rb:32
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[36mWordList Update (0.4ms)[0m  [1m[33mUPDATE "word_lists" SET "english_word" = $1, "updated_at" = $2 WHERE "word_lists"."id" = $3[0m  [["english_word", "Behhhhhhh"], ["updated_at", "2018-11-08 18:14:28.190708"], ["id", 8]]
+  ↳ app/controllers/word_lists_controller.rb:20
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/word_lists_controller.rb:20
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 6.5ms)
+
+
